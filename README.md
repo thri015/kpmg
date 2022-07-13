@@ -2,9 +2,10 @@
 
 How to run this project
 -----------------------
-
 just for your ref  3 tire diagram - 
-![image](https://user-images.githubusercontent.com/62998698/178655160-6b086bc9-56ed-493f-9678-5e2e8aaf2240.png)
+
+![image](https://user-images.githubusercontent.com/62998698/178655874-39f63a67-87a7-4163-87df-6e9a806de072.png)
+
 
 1. git clone github_url
 2. cd bootstrap_environement
