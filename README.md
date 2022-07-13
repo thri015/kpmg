@@ -3,7 +3,7 @@
 How to run this project
 -----------------------
 
-just for your ref for the 3 tire diagram - https://medium.com/@codewithniraj/the-typical-3-tier-architecture-of-web-application-in-aws-f2f9d662fdfe
+just for your ref  3 tire diagram - https://medium.com/@codewithniraj/the-typical-3-tier-architecture-of-web-application-in-aws-f2f9d662fdfe
 
 1. git clone github_url
 2. cd bootstrap_environement
