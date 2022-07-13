@@ -2,7 +2,7 @@ variable "tags" {
   type = any
 }
 
-variable "az" {
-  type = any
-}
+# variable "az" {
+#   type = any
+# }
 

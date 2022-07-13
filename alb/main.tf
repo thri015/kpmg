@@ -2,8 +2,8 @@ resource "aws_lb" "alb" {
   name               = var.name
   internal           = true
   load_balancer_type = "application"
-  security_groups    = var.sg 
-  subnets            = var.subnet 
+  security_groups    = var.sg
+  subnets            = var.subnet
 
   enable_deletion_protection = true
 
@@ -31,12 +31,12 @@ resource "aws_alb_target_group" "group" {
 }
 
 resource "aws_alb_listener" "listener_http" {
-  load_balancer_arn = "${aws_alb.alb.arn}"
+  load_balancer_arn = aws_lb.alb.id
   port              = "80"
   protocol          = "HTTP"
 
   default_action {
-    target_group_arn = "${aws_alb_target_group.group.arn}"
+    target_group_arn = aws_alb_target_group.group.arn
     type             = "forward"
   }
 }
@@ -48,7 +48,6 @@ resource "aws_launch_template" "template" {
 }
 
 resource "aws_autoscaling_group" "asg" {
-  availability_zones = var.az
   desired_capacity   = 1
   max_size           = 1
   min_size           = 1
@@ -57,7 +56,7 @@ resource "aws_autoscaling_group" "asg" {
     id      = aws_launch_template.template.id
     version = "$Latest"
   }
-  tags  = var.tags
+  tags = var.tags
 }
 
 resource "aws_autoscaling_attachment" "asg_attachment" {

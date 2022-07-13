@@ -3,5 +3,5 @@ variable "dns_name" {
 }
 
 variable "dns_record_name" {
- type = string 
+  type = any
 }

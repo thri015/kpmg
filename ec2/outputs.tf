@@ -1,14 +1,14 @@
 output "arn" {
-  value      = aws_instance.instance.arn
+  value = aws_instance.instance.arn
 }
 
 output "id" {
-  value      = aws_instance.instance.id
+  value = aws_instance.instance.id
 }
 
-output "name" {
-  value      = aws_instance.instance.name
-}
+# output "name" {
+#   value = aws_instance.instance.name
+# }
 
 output "aws_iam_instance_profile_arn" {
   value = aws_iam_instance_profile.profile.arn

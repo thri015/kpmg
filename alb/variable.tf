@@ -3,15 +3,15 @@ variable "name" {
 }
 
 variable "sg" {
-  type = list
+  type = list(any)
 }
 
 variable "subnet" {
-  type = list
+  type = list(any)
 }
 
 variable "s3_bucket_arn" {
-  type= string
+  type = string
 }
 
 variable "vpc_id" {
@@ -27,7 +27,7 @@ variable "ami_id" {
 
 variable "instance_type" {
   type = string
-#   default = "t2.micro"
+  #   default = "t2.micro"
 }
 
 

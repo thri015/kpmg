@@ -1,8 +1,4 @@
 
-variable "network_interface_id" {
-  type = list
-}
-
 variable "tags" {
   type = any
 }
@@ -18,7 +14,7 @@ variable "role" {
 variable "name" {
   type = string
 }
-variable "vpc" {
+variable "vpc_id" {
   type = any
 }
 
